@@ -40,10 +40,19 @@ static void MostrarJugadoresDelEquipo(Equipo equipo, string nombreEquipo)
         }
     }
 }
+
 #endregion
 
 MostrarJugadoresDelEquipo(equipo1, equipo1.Nombre);
 
 MostrarJugadoresDelEquipo(equipo2 , equipo2.Nombre);
 
+
+EquipoLocal local = new EquipoLocal("Tigres", "Carlos");
+EquipoVisitante visitante = new EquipoVisitante("Leones", "María");
+
+string resultado = local.SimularPartido(local, visitante);
+
+
+Console.WriteLine(resultado);
 
